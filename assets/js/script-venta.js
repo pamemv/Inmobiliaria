@@ -23,20 +23,20 @@ const mostrarDataEnCards = () => {
     const card = document.createElement("div");
     card.className = "col-md-4 mb-4";
     card.innerHTML = `
-    <div class="card">
+      <div class="card">
         <img
             src=${src}
             class="card-img-top"
-            alt="Imagen del departamento"/>
+            alt="Imagen del departamento"
+        />
         
-            <div class="card-body">
-            
-            <h5 class="card-title">${nombre}</h5>
-            <p class="card-text">${descripcion}</p>
-            <p><i class="fas fa-map-marker-alt"></i> ${ubicacion}</p>
-            <p><i class="fas fa-bed"></i> ${habitaciones} Habitaciones |
-            <i class="fas fa-bath"></i> 4 Baños</p>
-            <p><i class="fas fa-dollar-sign"></i> ${costo}</p>
+        <div class="card-body">
+          <h5 class="card-title">${nombre}</h5>
+          <p class="card-text">${descripcion}</p>
+          <p><i class="fas fa-map-marker-alt"></i> ${ubicacion}</p>
+          <p><i class="fas fa-bed"></i> ${habitaciones} Habitaciones |
+          <i class="fas fa-bath"></i> 4 Baños</p>
+          <p><i class="fas fa-dollar-sign"></i> ${costo}</p>
 
         ${
           smoke
@@ -49,6 +49,8 @@ const mostrarDataEnCards = () => {
             ? '<p class="text-success"> <i class="fas fa-paw"></i> Mascotas permitidas</p>'
             : '<p class="text-danger"> <i class="fas fa-ban"></i> No se permiten mascotas</p>'
         }
+        </div>
+      </div>
     `;
 
     // insertar la card dentro del contenedor
